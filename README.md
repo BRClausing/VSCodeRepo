@@ -1,6 +1,2 @@
 # VSCodeRepo
-Repository for VS Code projects
-
-Making a change.
-
-This is in branch, not yet in master.
+Repository for random projects, some intended to be used during technical interviews, some are solutions to problems on LeetCode.com.  
