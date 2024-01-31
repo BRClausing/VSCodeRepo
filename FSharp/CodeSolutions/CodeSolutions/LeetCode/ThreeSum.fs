@@ -77,4 +77,9 @@
         |> targetToFourComboList
         |> List.distinct 
 
-
+    let sumsPrinter (sumsList: int list list) = 
+        printfn "["
+        sumsList 
+        |> List.iter (fun x -> 
+                        printfn "  %A" [ String.concat ", " (List.map string x) ] |> ignore)
+        printfn "]"
