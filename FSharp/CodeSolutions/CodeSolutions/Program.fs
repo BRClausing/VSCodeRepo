@@ -11,4 +11,6 @@ let main argv =
     printfn ""
     printfn "Two Sums to Four List:"
     ThreeSum.sumsPrinter ThreeSum.twoSumsToFourList
+
+    SumTriangle.runSumTriangle
     0 // return an integer exit code
