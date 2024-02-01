@@ -7,6 +7,7 @@
 
   <ItemGroup>
     <Compile Include="LeetCode\ThreeSum.fs" />
+    <Compile Include="LeetCode\SumTriangle.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
 
