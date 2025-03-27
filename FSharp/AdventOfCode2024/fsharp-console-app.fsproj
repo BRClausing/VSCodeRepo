@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="utils\files.fs" />
+    <Compile Include="day-one-list1.fs" />
+    <Compile Include="day-one-list2.fs" />
+    <Compile Include="day-two-data.fs" />
+    <Compile Include="day-three-data.fs" />
+    <Compile Include="day-four-data.fs" />
+    <Compile Include="day-five-data.fs" />
+    <Compile Include="day-six-data.fs" />
+    <Compile Include="day-seven-data.fs" />
+    <Compile Include="day-nine-data.fs" />
+    <Compile Include="day-ten-data.fs" />
+    <Compile Include="day-one.fs" />
+    <Compile Include="day-two.fs" />
+    <Compile Include="day-three.fs" />
+    <Compile Include="day-four.fs" />
+    <Compile Include="day-five.fs" />
+    <Compile Include="day-six.fs" />
+    <Compile Include="day-seven.fs" />
+    <Compile Include="day-nine.fs" />
+    <Compile Include="day-ten.fs" />
+    <Compile Include="main.fs" />
+  </ItemGroup>
+
+</Project>
