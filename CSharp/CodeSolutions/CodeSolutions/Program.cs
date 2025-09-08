@@ -1,6 +1,7 @@
 ﻿using System;
 using InterviewQuestions;
 using LeetCode;
+using CodeSolutions.AS3JobSearch;
 
 namespace CodeSolutions
 {
@@ -40,9 +41,13 @@ namespace CodeSolutions
 
             // LeetCode
             //  ThreeSum solution
-            int[] data = new int[6] { -1, 0, 1, 2, -1, -4 };
-            ThreeSumSolution solution = new ThreeSumSolution(data);
-            solution.PrintToConsole();
+            //int[] data = new int[6] { -1, 0, 1, 2, -1, -4 };
+            //ThreeSumSolution solution = new ThreeSumSolution(data);
+            //solution.PrintToConsole();
+
+            // Load Job Search JSON results
+            XmlResults results = new (@"C:\Source (Local)\VSCodeRepo\CSharp\CodeSolutions\CodeSolutions\AS3_JobSearch\AS3-job-results.json");
+            Console.WriteLine($"Total results found: {results.Results.Length}");
         }
     }
 }
