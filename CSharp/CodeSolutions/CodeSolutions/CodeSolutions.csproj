@@ -6,7 +6,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="InterviewQuestions\" />
     <Folder Include="LeetCode\" />
   </ItemGroup>
 

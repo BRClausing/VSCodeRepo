@@ -45,9 +45,10 @@ namespace CodeSolutions
             //ThreeSumSolution solution = new ThreeSumSolution(data);
             //solution.PrintToConsole();
 
-            // Load Job Search JSON results
-            XmlResults results = new (@"C:\Source (Local)\VSCodeRepo\CSharp\CodeSolutions\CodeSolutions\AS3_JobSearch\AS3-job-results.json");
+            // Load AS3 Job Search JSON results - see As3Results.cs for details
+            As3Results results = new (@"C:\Source (Local)\VSCodeRepo\CSharp\CodeSolutions\CodeSolutions\AS3_JobSearch\AS3-job-results.json");
             Console.WriteLine($"Total results found: {results.Results.Length}");
+            results.PrintResults();
         }
     }
 }

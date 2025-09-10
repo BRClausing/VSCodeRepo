@@ -1,5 +1,7 @@
 ﻿using Newtonsoft.Json;
+using System;
 using System.IO;
+using System.Linq;
 
 namespace CodeSolutions.AS3JobSearch
 {
@@ -67,7 +69,7 @@ namespace CodeSolutions.AS3JobSearch
         public Item[] Results { get; set; }
     }
 
-    internal class XmlResults(string xmlResultsFilePath)
+    internal class As3Results(string xmlResultsFilePath)
     {
         public Item[] Results { get; private set; } = ConvertJsonToSearchResult(xmlResultsFilePath).Results;
 
@@ -76,6 +78,30 @@ namespace CodeSolutions.AS3JobSearch
             using StreamReader sr = new(xmlResultsFilePath);
             string json = sr.ReadToEnd();
             return JsonConvert.DeserializeObject<SearchResult>(json);
+        }
+
+        private void FilterOutSwedishLanguageResults()
+        {
+            Results = Results.Where(item => !item.Text.Contains("ö", StringComparison.OrdinalIgnoreCase)
+                              || !item.Text.Contains("ä", StringComparison.OrdinalIgnoreCase)).ToArray();
+        }
+
+        public void PrintResults ()
+        {
+            FilterOutSwedishLanguageResults();
+            Console.WriteLine($"Total results after filtering out Swedish language results: {Results.Length}");
+            foreach (var item in Results)
+            {
+                Console.WriteLine($"Job Title (Id): {item.JobTitle} ({item.Id})");
+                Console.WriteLine($"Company: {item.Company?.Name} ({item.Company?.Url})");
+                Console.WriteLine($"Location: {item.Location}");
+                Console.WriteLine($"Posted Date: {item.FormattedDate}");
+                Console.WriteLine($"Job URL: {item.Url}");
+                Console.WriteLine($"Contact Person Name: {item.Contact.Name}");
+                Console.WriteLine($"Contact Person Email: {item.Contact.Email}");
+                Console.WriteLine($"Contact Person Title: {item.Contact.Title}");
+                Console.WriteLine(new string('-', 40));
+            }
         }
     }
 }
