@@ -2,6 +2,7 @@
 using InterviewQuestions;
 using LeetCode;
 using CodeSolutions.AS3JobSearch;
+using CodeSolutions.Playground;
 
 namespace CodeSolutions
 {
@@ -46,9 +47,12 @@ namespace CodeSolutions
             //solution.PrintToConsole();
 
             // Load AS3 Job Search JSON results - see As3Results.cs for details
-            As3Results results = new (@"C:\Source (Local)\VSCodeRepo\CSharp\CodeSolutions\CodeSolutions\AS3_JobSearch\AS3-job-results.json");
-            Console.WriteLine($"Total results found: {results.Results.Length}");
-            results.PrintResults();
+            //As3Results results = new (@"C:\Source (Local)\VSCodeRepo\CSharp\CodeSolutions\CodeSolutions\AS3_JobSearch\AS3-job-results.json");
+            //Console.WriteLine($"Total results found: {results.Results.Length}");
+            //results.PrintResults();
+
+            // Book: C# 12 in a nutshell reference
+            
         }
     }
 }
